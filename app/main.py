@@ -1,12 +1,11 @@
-from os import path
-
-from app.data_loader import DataLoader
+import os
+from app.data_loadder import DataLoader
 from app.customer import Customer
 from app.shop import Shop
 
 
 def shop_trip() -> None:
-    data = DataLoader(path.join("app", "config.json"))
+    data = DataLoader(os.path.join("..", "app", "config.json"))
 
     fuel_price = data.fuel_price
 
